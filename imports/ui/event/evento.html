@@ -1,17 +1,43 @@
 <template name="evento">
-
     <div class="row">
-        <div class="col-xs-12 {{#if checked}}checked{{/if}}">
-            <div class="row">
-                <div class="col-xs-11">
-                    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-                    <span class="text">{{nome}}</span>
-                </div>
-                <div class="col-xs-1">
-                    <button class="btn btn-danger">Não gostei</button>
-                </div>
-            </div>
+        <div class="col-xs-offset-9">
+            <label class="hide-completed">
+                Esconder os que não gostei
+                <input type="checkbox" />
+            </label>
         </div>
     </div>
-    <hr />
+<br />
+    <div class="row">
+        <div class="row">
+            <div class="col-xs-2">
+                Gostei
+            </div>
+            <div class="col-xs-9">
+                Nome
+            </div>
+            <div class="col-xs-1">
+                Ação
+            </div>
+        </div>
+        <br />
+        <hr />
+        <div class="col-xs-12">
+            {{#each eventos}}
+                <div class="row">
+                    <div class="col-xs-2">
+                        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+                    </div>
+                    <div class="col-xs-9  {{#if checked}}active{{/if}}">
+                        <span class="text">{{nome}}</span>
+                    </div>
+                    <div class="col-xs-1">
+                        <button class="btn btn-danger">Excluir</button>
+                    </div>
+                </div>
+                <hr />
+            {{/each}}
+        </div>
+    </div>
+
 </template>
