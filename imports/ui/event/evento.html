@@ -1,0 +1,17 @@
+<template name="evento">
+
+    <div class="row">
+        <div class="col-xs-12 {{#if checked}}checked{{/if}}">
+            <div class="row">
+                <div class="col-xs-11">
+                    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+                    <span class="text">{{nome}}</span>
+                </div>
+                <div class="col-xs-1">
+                    <button class="btn btn-danger">Não gostei</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+</template>

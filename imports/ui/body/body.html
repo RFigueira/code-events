@@ -1,0 +1,31 @@
+<body>
+<div class="container">
+    <header class="container">
+        <nav class="navbar navbar-default">
+           <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Guia de eventos, gostei de {{gosteiCount}} eventos
+                </a>
+                <label class="navbar-brand hide-completed">
+                    <input type="checkbox" />
+                        Esconder o que não gostei
+                </label>
+               <div class="navbar-collapse collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                       User
+                   </ul>
+               </div>
+           </div>
+        </nav>
+        <form class="new-event">
+            <input type="text" name="nome" placeholder="Adicionar novo evento" />
+        </form>
+    </header>
+
+    <ul>
+        {{#each eventos}}
+            {{> evento}}
+        {{/each}}
+    </ul>
+</div>
+</body>
